@@ -6,4 +6,4 @@ else
 rm -rf /opt/moviegrabber
 git clone https://github.com/binhex/moviegrabber.git /opt/moviegrabber
 chown -R nobody:users /opt/moviegrabber
-
+fi
