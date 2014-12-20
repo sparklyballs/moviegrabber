@@ -19,8 +19,11 @@ RUN chown -R nobody:users /opt/moviegrabber
 EXPOSE 9191
 # Moviegrabber Configuration
 VOLUME /config
-# Downloads/Movies directory
-RUN mkdir /mnt/XBMC-Media /mnt/Downloads
+
+# Watch-Folder/Movies
+VOLUME /watchfolder
+VOLUME /movies
+
 # Add Moviegrabber to runit
 RUN mkdir /etc/service/moviegrabber
 ADD moviegrabber.sh /etc/service/moviegrabber/run
