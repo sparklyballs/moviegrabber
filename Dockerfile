@@ -19,7 +19,7 @@ RUN add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu/ trusty universe
 RUN add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu/ trusty-updates universe multiverse"
 RUN apt-get update -q
 # Install Dependencies
-RUN apt-get install -qy python ca-certificates wget unrar git
+RUN apt-get install -qy python python-cheetah ca-certificates wget unrar git
 # Install Moviegrabber
 RUN git clone https://github.com/binhex/moviegrabber.git /opt/moviegrabber
 RUN chown -R nobody:users /opt/moviegrabber
