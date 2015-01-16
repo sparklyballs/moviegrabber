@@ -19,10 +19,10 @@ apt-get update -q && \
 # Install Dependencies
 apt-get install -qy python python-cheetah ca-certificates wget unzip unrar && \
 # Get  Moviegrabber
-mkdir -p opt/moviegrabber && \ 
 cd /root && \
 wget https://github.com/binhex/moviegrabber/archive/stable.zip && \
-unzip stable.zip -d /opt/moviegrabber && \
+unzip stable.zip && \
+mv moviegrabber-stable /opt/moviegrabber && \
 chown -R nobody:users /opt/moviegrabber
 EXPOSE 9191
 # Moviegrabber Configuration
